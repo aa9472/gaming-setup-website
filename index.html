@@ -1,38 +1,27 @@
+index.html
+
 <!DOCTYPE html>
-<html>
-<head>
-  <h1>press me </h1>
-</head>
-<style>
-  h1{
-    color:blue; }
- body{ background: green;}
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(156,45,253,1) 100%); 
-  
-</style>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dark/Light Toggle Switch</title>
+  </head>
   <body>
-  <p>button makes noise use to make noise</p>
-    <div class="action-btns">
-  <button class="btn play">Play</button>
-  <button class="btn pause">Pause</button>
-</div> 
-script.js
+    <div class="container">
+      <input type="checkbox" id="switch" />
 
-let playBtn = document.getElementsByClassName("play");
-let pauseBtn = document.getElementsByClassName("pause");
+      <div class="bg-fill"></div>
 
-let text = document.querySelector("p");
-
-const audio = new Audio("./audio.mp3");
-
-playBtn[0].addEventListener("click", (e) => {
-  audio.play();
-  text.innerHTML = "Audio Playing🔊";
-});
-
-pauseBtn[0].addEventListener("click", (e) => {
-  audio.pause();
-  text.innerHTML = "Audio Paused";
-});  
-  </body>  
+      <div class="switch-btn">
+        <label for="switch">
+          <div class="icons">
+            <img src="./moon-icon.png" alt="moon" />
+            <img src="./sun-icon.png" alt="moon" />
+          </div>
+        </label>
+      </div>
+    </div>
+  </body>
 </html>
